@@ -1,4 +1,15 @@
-const userInput = prompt("Enter Temperature in Fahrenheit");
+let userInput;
+let isValid = false;
+ 
+while (!isValid){
+  userInput = prompt("Enter Temperature in Fahrenheit.");
+
+  if (/\D/.test(userInput)||userInput.trim() === ""||userInput === null){
+    alert("Please enter a valid Temperature in Fahrenheit. (Numbers Only)")
+   }else{
+    isValid = true;
+  }
+}
 
 const fahrenheitTemp = Number(userInput);
 
