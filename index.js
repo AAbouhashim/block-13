@@ -1,16 +1,12 @@
-let userInput = prompt("Enter Temperature in Fahrenheit");
+const userInput = prompt("Enter Temperature in Fahrenheit");
 
-let fahrenheitTemp = Number(userInput);
+const fahrenheitTemp = Number(userInput);
 
-function toCelsius(fahrenheitTemp) {
+const toCelsius = (fahrenheitTemp) => {
   return (fahrenheitTemp - 32) * (5 / 9);
 }
 
-let celsiusTemp = toCelsius(fahrenheitTemp);
-
-alert(`It's ${celsiusTemp.toFixed(2)}°C out today.`);
-
-function describeTemperature(fahrenheitTemp) {
+const describeTemperature = (fahrenheitTemp) => {
   if (fahrenheitTemp < 32) {
     return `Very Cold`;
   } else if (fahrenheitTemp < 64) {
@@ -24,6 +20,5 @@ function describeTemperature(fahrenheitTemp) {
   }
 }
 
+alert(`It's ${toCelsius(fahrenheitTemp).toFixed(2)}°C out today.`);
 alert(`That's ${describeTemperature(fahrenheitTemp)}!`);
-
-
